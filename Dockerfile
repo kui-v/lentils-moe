@@ -64,19 +64,5 @@ ENV HOSTNAME "0.0.0.0"
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
 CMD ["node", "server.js"]
 
-# # Copy directories
-# COPY public/ /lentils-moe/public
-# COPY src/ /lentils-moe/src
-
-# # Copy root-level files
-# COPY package.json /lentils-moe
-# COPY package-lock.json /lentils-moe
-# COPY jsconfig.json /lentils-moe
-# COPY .eslintrc.json /lentils-moe
-# COPY next.config.mjs /lentils-moe
-# COPY postcss.config.js /lentils-moe
-# COPY tailwind.config.js /lentils-moe
-
-# RUN npm install
-
-# CMD ["npm," "start"]
+# when building, make sure to do on mac:
+# docker build --platform linux/amd64 -t lentils-moe .
